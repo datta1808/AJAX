@@ -15,7 +15,7 @@ function makeAJAXCall(methodType, url, callback, async = true, data = null) {
         //             xhr.readyState + " Status: " + xhr.status);
 
         // readyState = 4; When the http connection is closed & the status code is 200, the only do a callback i.e getUserDetails()
-        if (xhr.readyState === 4) {
+        if (xhr.readyState === 4){
         if (xhr.status === 200 || xhr.status === 201) {
             callback(xhr.responseText);
         } else if (xhr.status >= 400) {
